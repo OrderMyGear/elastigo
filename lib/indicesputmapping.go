@@ -21,14 +21,11 @@ import (
 type Mapping map[string]MappingOptions
 
 type MappingOptions struct {
-	Id         IdOptions              `json:"_id"`
-	Timestamp  TimestampOptions       `json:"_timestamp"`
 	Analyzer   *AnalyzerOptions       `json:"_analyzer,omitempty"`
 	Parent     *ParentOptions         `json:"_parent,omitempty"`
 	Routing    *RoutingOptions        `json:"_routing,omitempty"`
 	Size       *SizeOptions           `json:"_size,omitempty"`
 	Source     *SourceOptions         `json:"_source,omitempty"`
-	TTL        *TTLOptions            `json:"_ttl,omitempty"`
 	Type       *TypeOptions           `json:"_type,omitempty"`
 	Properties map[string]interface{} `json:"properties"`
 }
@@ -68,7 +65,7 @@ type TypeOptions struct {
 }
 
 type TTLOptions struct {
-	Enabled bool `json:"enabled"`
+	Enabled bool   `json:"enabled"`
 	Default string `json:"default,omitempty"`
 }
 
