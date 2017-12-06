@@ -21,8 +21,6 @@ import (
 type Mapping map[string]MappingOptions
 
 type MappingOptions struct {
-	Id               IdOptions                `json:"_id"`
-	Timestamp        TimestampOptions         `json:"_timestamp"`
 	Analyzer         *AnalyzerOptions         `json:"_analyzer,omitempty"`
 	Parent           *ParentOptions           `json:"_parent,omitempty"`
 	Routing          *RoutingOptions          `json:"_routing,omitempty"`
