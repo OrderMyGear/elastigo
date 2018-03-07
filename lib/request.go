@@ -59,7 +59,6 @@ func (r *Request) SetBodyGzip(data interface{}) error {
 		if _, err := gw.Write(b); err != nil {
 			return err
 		}
-		r.Header.Set("Content-Type", "application/json")
 	}
 
 	if err := gw.Close(); err != nil {
